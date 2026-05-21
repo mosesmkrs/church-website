@@ -29,7 +29,7 @@ export default function HomePage() {
   return (
     <main>
       {/* Hero */}
-      <section className="relative min-h-[480px] flex items-center justify-center text-center overflow-hidden">
+      <section className="relative min-h-120 flex items-center justify-center text-center overflow-hidden">
         <div
           className="absolute inset-0"
           style={{
