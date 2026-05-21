@@ -138,7 +138,7 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="border-t border-white/10 pt-6 text-center text-xs text-gray-600">
-          © 2025 South Bend First Media Team. All rights reserved.
+          © 2026 South Bend First Media Team. All rights reserved.
         </div>
       </div>
     </footer>
