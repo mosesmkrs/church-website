@@ -8,7 +8,7 @@ const navLinks = [
   { label: "Who We Are", href: "/pages/who-we-are" },
   { label: "Worship", href: "/pages/worship" },
   { label: "Giving", href: "https://adventistgiving.org/donate/ANF8JG" },
-  { label: "Our School", href: "/pages/our-school" },
+  { label: "Our School", href: "https://oursbja.com/" },
   { label: "Contact", href: "/pages/contact" },
   { label: "Our Stories", href: "/pages/our-stories" },
   { label: "Our Life", href: "/pages/our-life" },
