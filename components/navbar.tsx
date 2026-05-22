@@ -3,6 +3,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import { SignInButton, Show } from "@clerk/nextjs";
+import UserMenu from "@/components/user-menu";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -74,19 +76,31 @@ export default function Navbar() {
         </ul>
 
         {/* Mobile hamburger */}
-        <button
-          className="lg:hidden p-2 text-gray-600 hover:text-[#1a3a5c]"
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle menu"
-        >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-            {menuOpen ? (
-              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-            ) : (
-              <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-            )}
-          </svg>
-        </button>
+        <div className="flex items-center gap-4">
+          <Show when="signed-out">
+            <SignInButton mode="modal">
+              <button className="text-sm font-semibold text-[#1a3a5c] hover:text-[#0d2137] transition-colors">
+                Sign In
+              </button>
+            </SignInButton>
+          </Show>
+          <Show when="signed-in">
+            <UserMenu />
+          </Show>
+          <button
+            className="lg:hidden p-2 text-gray-600 hover:text-[#1a3a5c]"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle menu"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+              {menuOpen ? (
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+              )}
+            </svg>
+          </button>
+        </div>
       </nav>
 
       {/* Mobile menu */}
