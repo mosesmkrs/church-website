@@ -26,12 +26,14 @@ export default function WhoWeArePage() {
   return (
     <main>
       {/* ── Hero ── */}
-      <section className="relative bg-linear-to-br from-[#0d2137] to-[#1a3a5c] py-24 px-6 text-center">
-        <div className="max-w-3xl mx-auto">
-          <p className="text-[#93c5fd] text-3xl tracking-widest uppercase mb-3 font-medium">
+      <section className="relative md:min-h-100 flex items-center justify-center text-center overflow-hidden py-24 px-6">
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/who-we-are.jpg')" }} />
+        <div className="absolute inset-0 bg-black/40" />
+        <div className="relative z-10 max-w-3xl mx-auto">
+          <p className="text-white text-3xl tracking-widest uppercase mb-3 font-medium">
             About Us
           </p>
-          <p className="text-blue-200 text-base leading-relaxed">
+          <p className="text-white text-base leading-relaxed">
           No matter your story, your questions, your background, or your struggles, you are welcome. Revelation 22:17 reminds us of the invitation Jesus still gives: “Let anyone who is thirsty come.” If you&apos;re longing for peace, healing, purpose, or just a place to breathe again, there is room here for you.
           </p>
         </div>
