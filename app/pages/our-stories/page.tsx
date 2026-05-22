@@ -50,7 +50,7 @@ export default function OurStoriesPage() {
   return (
     <main>
       {/* Hero */}
-      <section className="relative bg-gradient-to-br from-[#0d2137] to-[#1a3a5c] py-24 px-6 text-center">
+      <section className="relative bg-linear-to-br from-[#0d2137] to-[#1a3a5c] py-24 px-6 text-center">
         <div className="max-w-2xl mx-auto">
           <p className="text-[#93c5fd] text-xs tracking-widest uppercase mb-3 font-medium">
             Testimonies
@@ -84,7 +84,8 @@ export default function OurStoriesPage() {
               Order Free Tracts
             </Link>
             <Link
-              href="/pages/giving"
+              href="https://adventistgiving.org/donate/ANF8JG"
+              target="_blank"
               className="border border-white/60 text-white px-6 py-3 rounded text-xs font-semibold tracking-widest uppercase hover:bg-white/10 transition-colors no-underline text-center"
             >
               Donate Now

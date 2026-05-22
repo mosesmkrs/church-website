@@ -136,7 +136,8 @@ export default function HomePage() {
                 Learn More
               </Link>
               <Link
-                href="/pages/giving"
+                href="https://adventistgiving.org/donate/ANF8JG"
+                target="_blank"
                 className="border border-[#1a3a5c] text-[#1a3a5c] px-6 py-3 rounded text-sm font-semibold tracking-widest uppercase hover:bg-[#1a3a5c] hover:text-white transition-colors no-underline"
               >
                 Donate Now

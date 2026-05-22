@@ -7,7 +7,7 @@ const navLinks = [
   { label: "Home", href: "/" },
   { label: "Who We Are", href: "/pages/who-we-are" },
   { label: "Worship", href: "/pages/worship" },
-  { label: "Giving", href: "/pages/giving" },
+  { label: "Giving", href: "https://adventistgiving.org/donate/ANF8JG" },
   { label: "Our School", href: "/pages/our-school" },
   { label: "Contact", href: "/pages/contact" },
   { label: "Our Stories", href: "/pages/our-stories" },
@@ -47,12 +47,23 @@ export default function Navbar() {
         <ul className="hidden lg:flex items-center gap-5 list-none m-0 p-0">
           {navLinks.map((link) => (
             <li key={link.href}>
-              <Link
-                href={link.href}
-                className="text-[11px] font-medium tracking-widest uppercase text-gray-600 hover:text-[#1a3a5c] transition-colors no-underline"
-              >
-                {link.label}
-              </Link>
+              {link.href.startsWith("http") ? (
+                <a
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[11px] font-medium tracking-widest uppercase text-gray-600 hover:text-[#1a3a5c] transition-colors no-underline"
+                >
+                  {link.label}
+                </a>
+              ) : (
+                <Link
+                  href={link.href}
+                  className="text-[11px] font-medium tracking-widest uppercase text-gray-600 hover:text-[#1a3a5c] transition-colors no-underline"
+                >
+                  {link.label}
+                </Link>
+              )}
             </li>
           ))}
         </ul>
@@ -79,13 +90,25 @@ export default function Navbar() {
           <ul className="flex flex-col gap-3 list-none m-0 p-0 pt-3">
             {navLinks.map((link) => (
               <li key={link.href}>
-                <Link
-                  href={link.href}
-                  onClick={() => setMenuOpen(false)}
-                  className="text-[11px] font-medium tracking-widest uppercase text-gray-600 hover:text-[#1a3a5c] transition-colors no-underline block"
-                >
-                  {link.label}
-                </Link>
+                {link.href.startsWith("http") ? (
+                  <a
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setMenuOpen(false)}
+                    className="text-[11px] font-medium tracking-widest uppercase text-gray-600 hover:text-[#1a3a5c] transition-colors no-underline block"
+                  >
+                    {link.label}
+                  </a>
+                ) : (
+                  <Link
+                    href={link.href}
+                    onClick={() => setMenuOpen(false)}
+                    className="text-[11px] font-medium tracking-widest uppercase text-gray-600 hover:text-[#1a3a5c] transition-colors no-underline block"
+                  >
+                    {link.label}
+                  </Link>
+                )}
               </li>
             ))}
           </ul>
