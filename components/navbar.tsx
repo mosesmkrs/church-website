@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 
 const navLinks = [
@@ -28,10 +29,14 @@ export default function Navbar() {
       <nav className="bg-white border-b border-gray-200 px-6 py-3 flex items-center justify-between flex-wrap gap-3">
         {/* Brand */}
         <Link href="/" className="flex items-center gap-3 no-underline">
-          <div className="w-10 h-10 rounded-full bg-[#1a3a5c] flex items-center justify-center shrink-0">
-            <svg className="w-5 h-5 fill-white" viewBox="0 0 24 24">
-              <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
-            </svg>
+          <div className="w-12 h-12 flex items-center justify-center shrink-0 overflow-hidden">
+            <Image
+              src="https://static.wixstatic.com/media/7eeecb_ca4b4e9236c34b92b9ec8aea68638a53~mv2.png/v1/fill/w_158,h_158,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Hand%20Only%20inverted-10.png"
+              alt="Church logo"
+              width={40}
+              height={40}
+              className="w-full h-full object-cover"
+            />
           </div>
           <div className="flex flex-col leading-tight">
             <span className="text-xs font-semibold tracking-widest uppercase text-gray-900">
