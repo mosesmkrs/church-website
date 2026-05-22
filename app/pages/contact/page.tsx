@@ -60,8 +60,14 @@ export default function ContactPage() {
   return (
     <main>
       {/* Hero */}
-      <section className="relative bg-gradient-to-br from-[#0d2137] to-[#1a3a5c] py-24 px-6 text-center">
-        <div className="max-w-2xl mx-auto">
+      <section
+        className="relative bg-cover bg-center py-24 px-6 text-center"
+        style={{
+          backgroundImage: "url('/who-we-are.jpg')",
+        }}
+      >
+        <div className="absolute inset-0 bg-linear-to-br from-[#0d2137]/80 to-[#1a3a5c]/80"></div>
+        <div className="max-w-2xl mx-auto relative z-10">
           <p className="text-[#93c5fd] text-xs tracking-widest uppercase mb-3 font-medium">
             Get in Touch
           </p>
@@ -102,20 +108,16 @@ export default function ContactPage() {
               ))}
             </div>
 
-            {/* Map placeholder */}
-            <div className="mt-10 h-52 rounded-xl bg-gradient-to-br from-[#1a3a5c]/10 to-[#1a3a5c]/5 border border-gray-200 flex flex-col items-center justify-center gap-3">
-              <svg className="w-10 h-10 fill-[#1a3a5c]/30" viewBox="0 0 24 24">
-                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
-              </svg>
-              <p className="text-sm text-gray-400">1936 E Altgeld St, South Bend, IN 46614</p>
-              <a
-                href="https://maps.google.com/?q=1936+E+Altgeld+St+South+Bend+IN+46614"
-                target="_blank"
-                rel="noreferrer"
-                className="text-xs font-semibold text-[#1a3a5c] hover:underline no-underline tracking-wide"
-              >
-                Open in Google Maps →
-              </a>
+            {/* Map */}
+            <div className="mt-10 rounded-xl overflow-hidden border border-gray-200">
+              <iframe
+                title="Church location map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2990.823926455689!2d-86.26497!3d41.75843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8814a9e9f0f0f0f1%3A0x9f0f0f0f0f0f0f0f!2s1936%20E%20Altgeld%20St%2C%20South%20Bend%2C%20IN%2046614!5e0!3m2!1sen!2sus!4v1234567890"
+                width="100%"
+                height="208"
+                style={{ border: 0 }}
+                referrerPolicy="no-referrer-when-downgrade"
+              />
             </div>
           </div>
 
