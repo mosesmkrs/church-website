@@ -130,7 +130,7 @@ export default function AIChatModal({ isOpen, onClose }: AIChatModalProps) {
             </div>
             <div className="min-w-0 flex-1">
               <h2 id="chat-modal-title" className="truncate text-base font-semibold text-white sm:text-lg">
-                Church Assistant
+                South Bend First SDA Church
               </h2>
               <p className="truncate text-xs text-[#c5d9f0] sm:text-sm">
                 Ask about services, ministries, and more
